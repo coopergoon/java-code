@@ -20,7 +20,7 @@
         </dependency>
     </dependencies>
 
-为了能直接打包成为一个可执行的jar包，需要导入一个插件
+为了能直接打包成为一个可执行的jar包，通过java -jar 命令执行，需要导入一个插件
 
     <build>
     		<plugins>
@@ -33,28 +33,28 @@
 
 3. 创建启动应用主程序
 
-
-    package com.apple;
     
-    import org.springframework.boot.SpringApplication;
-    import org.springframework.boot.autoconfigure.SpringBootApplication;
-    
-    
-    @SpringBootApplication
-    public class HelloWorldMainApplication {
-        public static void main(String[] args) {
-    //        启动应用
-            SpringApplication.run(HelloWorldMainApplication.class, args);
+        package com.apple;
+        
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+        
+        
+        @SpringBootApplication
+        public class HelloWorldMainApplication {
+            public static void main(String[] args) {
+        //        启动应用
+                SpringApplication.run(HelloWorldMainApplication.class, args);
+            }
         }
-    }
-    
-    
-    
-    //加上注解 @SpringBootApplication标注一个主程序 说明这是一个spring boot应用
-    //psvm 是main方法的快捷键
-    
-    //第一步写 HelloWorldMainApplication ，启动应用
-    //第二步写 crontroller类
+        
+        
+        
+        //加上注解 @SpringBootApplication标注一个主程序 说明这是一个spring boot应用
+        //psvm 是main方法的快捷键
+        
+        //第一步写 HelloWorldMainApplication ，启动应用
+        //第二步写 crontroller类
     
 4. 写controller文件
 新建controller包，以及controller类 
